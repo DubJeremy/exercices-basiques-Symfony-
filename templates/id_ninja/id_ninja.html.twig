@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Fiche Ninja</h1>
+    <div class="idfile">
+        {% for snowflake in snowflakes %}
+            <h2>{{snowflake.name}}</h2>
+            <p>Favorite number: {{snowflake.fav_number}}</p>
+            <p>Description: {{snowflake.description}} </p>
+            <p>date: {{snowflake.created_at}}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
