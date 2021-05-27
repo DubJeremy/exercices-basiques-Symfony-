@@ -1,14 +1,11 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <h1>Fiche Ninja</h1>
+    <h1>Fiche Perso</h1>
     <div class="idfile">
-        {% for snowflake in snowflakes %}
             <h2>{{snowflake.name}}</h2>
             <p>Favorite number: {{snowflake.favNumber}}</p>
             <p>Description: {{snowflake.description}} </p>
             <p>date: {{snowflake.createdAt|date('j M')}}</p>
-            <a  id="file_perso" href="{{path("app_fileId_file", {id:snowflake.id})}}">More</a>
-        {% endfor %}
     </div>
 {% endblock %}

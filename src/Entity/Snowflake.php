@@ -25,10 +25,10 @@ class Snowflake
     /**
      * @ORM\Column(type="integer")
      */
-    private $fav_number;
+    private $favNumber;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\Column(type="text")
      */
     private $description;
 
@@ -56,12 +56,12 @@ class Snowflake
 
     public function getFavNumber(): ?int
     {
-        return $this->fav_number;
+        return $this->favNumber;
     }
 
-    public function setFavNumber(int $fav_number): self
+    public function setFavNumber(int $favNumber): self
     {
-        $this->fav_number = $fav_number;
+        $this->favNumber = $favNumber;
 
         return $this;
     }
@@ -71,7 +71,7 @@ class Snowflake
         return $this->description;
     }
 
-    public function setDescription(?string $description): self
+    public function setDescription(string $description): self
     {
         $this->description = $description;
 
